@@ -31,12 +31,12 @@ const AboutPage = () => {
 							</div>
 						<div className="col-9 about-right">
 							<div className="about-text">
-								<p>Platform of Hope was started in 2016 by a single mother who is passionate about enhancing the lives of others. The platform is driven by a desire to impact and fulfill a mission that omits greed and focuses on the needs of the homeless population in Atlanta. After a combined 20 years of working for corporate America, nonprofits, and GA Dept. of Family & Children Services, Doris defied odds, used her personal savings, and started Platform of Hope in a two-room storefront in Decatur, Georgia.</p>
+								<p>Platform of Hope was started in 2016 by a single mother passionate about enhancing the lives of others. The platform is driven by a desire to impact and fulfill a mission that omits greed and focuses on the needs of the homeless population in Atlanta. After a combined 20 years of working for corporate America, nonprofits, and GA Dept. of Family & Children Services, Doris defied odds, used her personal savings then started Platform of Hope in a two-room storefront in Decatur, Georgia.</p>
 								<div className="about-smallText">
-							<span> Driven by a desire to impact and fulfill a mission that omits greed and focuses on the needs of the homeless</span>
+							<span> Driven by a desire to impact lives and fulfill a mission that omits greed and focuses on the needs of homeless famalies</span>
 							</div>
 							</div>
-						
+
 						</div>
 					</div>
 				</div>
@@ -51,7 +51,7 @@ const AboutPage = () => {
 				</div>
 
 			</AboutHeader>
-			
+
 		<AboutPhases>
 			<div className="container about-phases">
 					<Row>
@@ -61,7 +61,7 @@ const AboutPage = () => {
 							<img src={about1} alt="an emtpy room"></img>
 							<div className="mt-3">
 								<h3>Phase 1</h3>
-							   <p>Due to the lack of current funding, services from Platform of Hope are being introduced in phases. During the first phase services consist of a food pantry and coat/cap/blanket closet. Based on funding, clients also receive assistance with prescriptions and transportation to/from work or organization.</p>
+							   <p>Due to lack in current funding, services are being introduced in phases. During the first phase services consist of a food pantry and coat/cap/blanket closet. Based on funding, clients also receive assistance with prescriptions and transportation to/from work or organization.</p>
 							   </div>
 							</div>
 
@@ -93,7 +93,7 @@ const AboutPage = () => {
 					</Row>
 			</div>
 		</AboutPhases>
-			
+
 		</Container>
 	)
 }

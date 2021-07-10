@@ -15,7 +15,7 @@ import twitter from './../../images/twitter.svg'
 import instagram from './../../images/instagram.svg'
 import youtube from './../../images/youtube.svg'
 import { Link } from 'react-router-dom';
-import guideStar from './../../images/guidestar-bronze.png';
+import guideStar from './../../images/guidestar-silver.png';
 
 const Footer = () => {
 	return (

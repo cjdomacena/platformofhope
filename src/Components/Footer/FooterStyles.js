@@ -11,12 +11,12 @@ export const FooterContainer = styled.div`
 			padding: 0 5rem;
 			font-size: 16px !important;
 		}
-		.logo-container 
+		.logo-container
 		{
-		
+
 			padding:1rem;
 		}
-	
+
 `
 
 export const Container = styled.div`
@@ -26,7 +26,7 @@ export const Container = styled.div`
 	height: auto;
 	padding: 1rem 1rem 2rem 1rem;
 
-	.logo-container 
+	.logo-container
 	{
 		display: grid;
 		.footer-info
@@ -37,21 +37,24 @@ export const Container = styled.div`
 		{
 			justify-content:center;
 			width: 100%;
-			
-					.footer-info 
+
+					.footer-info
 				{
-					display:flex;
+					@media screen and (min-width: 420px) and (max-width: 750px)
+					{
+						display:flex;
+					}
 					width: fit-content;
 					margin: 0;
 					padding: 0;
-					.email 
+					.email
 					{
 						padding-top: 1rem;
 					}
 				}
 		}
 
-	
+
 	}
 `
 
@@ -161,7 +164,7 @@ h4
 	}
 }
 
-.bronze-star 
+.bronze-star
 {
 	height: 100px;
 	width: 100px;

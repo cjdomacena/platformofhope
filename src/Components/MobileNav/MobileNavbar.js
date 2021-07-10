@@ -19,16 +19,17 @@ const MobileNavbar = ({isOpen, handleClick}) => {
 				<NavLinks>
 					<NavLink to="/">Home</NavLink>
 					<NavLink to="/services">Services</NavLink>
+					<NavLink to="/about">About</NavLink>
 					<NavLink to="/newsandevents">News & Events</NavLink>
-					<NavLink to="/donate">Donate</NavLink>
+					<NavLink to="/contact">Contact</NavLink>
 				</NavLinks>
 
 				<NavBtnWrapper>
-					<ButtonLink to="/">GET HELP</ButtonLink>
+					<ButtonLink to="/gethelp">GET HELP</ButtonLink>
 					<ButtonLink to="/donate">DONATE</ButtonLink>
 				</NavBtnWrapper>
 			</NavWrapper>
-	
+
 		</MobileNavbarContainer>
 
 	)

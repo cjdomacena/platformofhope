@@ -5,8 +5,9 @@ import paypal from './../images/paypal.png';
 import givelify from './../images/givelify.png';
 import venmo from './../images/venmo.png';
 import gofundme from './../images/gofundme.png';
-import makeChange from './../images/makechange.jpg';
-import { Row, Col } from 'react-bootstrap';
+// import makeChange from './../images/makechange.jpg';
+import { Row, Col, ListGroup } from 'react-bootstrap';
+import {Helmet} from 'react-helmet'
 
 /**
  * This is the Donate component that holds all information for the Donate page.
@@ -14,6 +15,9 @@ import { Row, Col } from 'react-bootstrap';
 function Donate() {
   return (
     <div className="donate">
+      <Helmet>
+        <title>Donate - Platform of Hope in Atlanta, Georgia</title>
+      </Helmet>
       <div className="donate-header">
         <h2>Support Comes in Different Forms</h2>
         <p>We are currently accepting monetary donations of any amount.
@@ -55,13 +59,7 @@ function Donate() {
           </div>
         </Col>
         <Col md={{ offset: 1 }}>
-          <div className="mt-3">
-            <h3>In-Kind Donations</h3>
-            <p>Platform of Hope greatly appreciates easy-open non-perishables,
-              coats, blankets, toiletries, backpacks, and any other item easy for
-              homeless families to transport.</p>
-          </div>
-          <div className="mt-3">
+        <div className="mt-3">
             <h3>Be A Volunteer</h3>
             <p>Platform of Hope is founded on volunteer service, and it is volunteerism
               that continues to be a life-giving force that will allow us to provide
@@ -70,23 +68,41 @@ function Donate() {
           </div>
         </Col>
       </Row>
-      <Row className="donate-row mt-3">
+      <Row className="donate-row mt-5">
         <Col md>
           <h3>Be An Affiliate</h3>
           <hr/>
           <div className="btm-pd">
             <h3>Business Partnerships</h3>
             <p>Platform of Hope offers flexible opportunities for businesses to benefit throughout giving.</p>
-            <button className="donate-btn">Contact Us</button>
+            <a href="/contact" rel="noopener noreferrer">
+              <button className="donate-btn">Contact Us</button>
+            </a>
           </div>
           <div>
             <h3>Civic/Group Partnerships</h3>
             <p>Platform of Hope offers community awareness and strong networking.</p>
-            <button className="donate-btn">Contact Us</button>
+            <a href="/contact" rel="noopener noreferrer">
+              <button className="donate-btn">Contact Us</button>
+            </a>
           </div>
         </Col>
         <Col md={{ offset: 1 }}>
-          <img className="affiliate-img" src={makeChange} alt=""/>
+        <h3>In-Kind Donations</h3>
+            <p>Platform of Hope greatly appreciates easy-open non-perishables,
+              coats, blankets, toiletries, backpacks, and any other item easy for
+              homeless families to transport. We accept: 
+              </p>
+            <ListGroup className="mt-3">
+            <ListGroup.Item>Feminine hygiene products</ListGroup.Item>
+            <ListGroup.Item>Toothbrush and toothpaste</ListGroup.Item>
+            <ListGroup.Item>Soap / Bath Soap</ListGroup.Item>
+            <ListGroup.Item>Anti-bacterial wipes</ListGroup.Item>
+            <ListGroup.Item>Mini-Sanitizer</ListGroup.Item>
+            <ListGroup.Item>Plastic gloves</ListGroup.Item>
+            <ListGroup.Item>Socks</ListGroup.Item>
+            <ListGroup.Item>Female Under garments</ListGroup.Item>
+          </ListGroup>
         </Col>
       </Row>
       <div className="appr-of-funding">

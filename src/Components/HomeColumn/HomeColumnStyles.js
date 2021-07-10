@@ -12,6 +12,13 @@ max-width: 1134px;
 {
 	padding: 2rem;
 }
+
+a 
+{
+	color: #414141;
+	text-decoration: none;
+}
+
 h1
 {
 	font-family: 'Scheherazade', serif;

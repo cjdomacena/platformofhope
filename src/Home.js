@@ -17,11 +17,10 @@ import SwiperCore, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper
 import 'swiper/swiper-bundle.css';
 import homeVideo from './images/test.mp4';
 import {FaArrowRight} from 'react-icons/fa'
+import { Helmet } from 'react-helmet';
 SwiperCore.use([Navigation, Pagination, EffectFade, Autoplay]);
 
-/**C:\Users\Cj\Desktop\poh\src\images\guidestar-bronze.png
- * This is the Home component that holds all information for the Home page.
- */
+
 function Home() {
  const limitEvents = Events.slice(0,3);
  const pastEvents = Events.slice(6,9);
@@ -29,21 +28,24 @@ function Home() {
     {
       imageLink: handsheart,
       title: "Volunteer",
-      paragraph: "Platform of Hope strives to offer a host of services to enhance and transform lives of homeless families and individuals in Atlanta, Georgia and surrounding counties.",
-      alt: "hands with heart"
+      paragraph: "Volunteering changes lives. You may volunteer by working events, making calls to potential donors, sorting donated goods and other tasks.",
+      alt: "hands with heart",
+      link: "/contact"
 
     },
     {
       imageLink: holdhands,
       title: "Get Help",
-      paragraph: "Platform of Hope is currently accepting applications for Dekalb County students. Applicants in Atlanta, Georgia are also welcome to apply. Bear in mind that disbursements are based on funding and family need.",
+      paragraph: "Platform of Hope distributes material essentials, non-perishables while providing financial assistance. Applications are accepted when funding is available.",
       alt: "holding hands",
+      link: "/gethelp"
     },
     {
       imageLink: prayinghands,
       title: "Donate",
       paragraph: "Platform of Hope greatly appreciates support of any kind. The quickest, most efficient way to give is through monetary donations.",
-      alt: "praying hands"
+      alt: "praying hands",
+      link: "/donate"
     }
 
   ];
@@ -61,9 +63,11 @@ function Home() {
 
   return (
     <div className="home">
+      <Helmet>
+      <title>Platform of Hope</title>
+      </Helmet>
       <div className="home-top">
         <div>
-          <h3 className="sub-heading">Non-Profit Organization</h3>
           <h1>Helping One Family At A Time.</h1>
           <p>
           Platform of Hope is an initiative designed to feed, house, clothe, and employ homeless families while empowering and transforming lives of the economically underserved. We successfully provide support and restore lives of homeless families in Atlanta, Georgia and surrounding counties. Platform of Hope facilitates in local correctional facilities then partners released offenders with employers for reemployment.
@@ -102,7 +106,10 @@ function Home() {
               return <HomeColumn
                 title={items.title}
                 paragraph={items.paragraph}
-                image={items.imageLink} alt={items.alt}
+                image={items.imageLink} 
+                alt={items.alt}
+                link={items.link}
+
               />
             })
           }
@@ -134,7 +141,7 @@ function Home() {
                     {
                   limitEvents.map(event=>(
 
-                   <a href="/"> <UpcomingEvents title={event.title} date={event.end.toLocaleString()} ></UpcomingEvents></a>
+                   <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.end.toLocaleString()} ></UpcomingEvents></a>
 
                   ))
 
@@ -155,7 +162,7 @@ function Home() {
                 {
                   pastEvents.map(event=>(
 
-                   <a href="/"> <UpcomingEvents title={event.title} date={event.end.toLocaleString()} ></UpcomingEvents></a>
+                   <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.end.toLocaleString()} ></UpcomingEvents></a>
 
                   ))
 
@@ -172,14 +179,14 @@ function Home() {
 
       {/* Phases */}
       <Phases/>
-      
+
 
       <div className="home-video container-fluid">
                  <video
                  autoPlay
                  loop
                  muted
-                 style = {{ 
+                 style = {{
                    width: "100%",
                    padding: "0",
                    margin: "0",
@@ -190,20 +197,20 @@ function Home() {
                  <div className="home-overlay">
                    <div className="home-text">
                    <h1>Learn more about us</h1>
-                   <p>Check out our full image and video gallery 
+                   <p>Check out our full image and video gallery
 
                    <a href="/newsandevents"><span className="pl-1"><FaArrowRight></FaArrowRight></span></a>
                    </p>
-                   
+
 
                    </div>
-                
+
                  </div>
       </div>
-      
+
     </div>
 
-    
+
   );
 }
 
