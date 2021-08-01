@@ -10,20 +10,13 @@ import { Events } from './Components/Events'
 import UpcomingEvents from './Components/UpcomingEvents';
 import Phases from './Components/Phases'
 import {Link} from "react-router-dom";
-import { SwiperSlide } from 'swiper/react';
-import img1 from './images/image-1.jpg';
-import img2 from './images/image-2.jpg';
-import SwiperCore, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
-import 'swiper/swiper-bundle.css';
 import homeVideo from './images/test.mp4';
 import {FaArrowRight} from 'react-icons/fa'
 import { Helmet } from 'react-helmet';
-SwiperCore.use([Navigation, Pagination, EffectFade, Autoplay]);
 
 
 function Home() {
- const limitEvents = Events.slice(0,3);
- const pastEvents = Events.slice(6,9);
+ 
   const homeColumn = [
     {
       imageLink: handsheart,
@@ -50,16 +43,7 @@ function Home() {
 
   ];
 
-  const imageSrcs = [img1, img2, img1, img2, img1, img2]
-  const slides = [];
-  for (let i = 0; i < imageSrcs.length; i++) {
-    slides.push(
-      <SwiperSlide key={`slide-${i}`} tag="li">
-        <img className="slider-img" src={imageSrcs[i]} alt=""/>
-      </SwiperSlide>
-    )
-  }
-
+  
 
   return (
     <div className="home">
@@ -106,7 +90,7 @@ function Home() {
               return <HomeColumn
                 title={items.title}
                 paragraph={items.paragraph}
-                image={items.imageLink} 
+                image={items.imageLink}
                 alt={items.alt}
                 link={items.link}
 
@@ -137,15 +121,13 @@ function Home() {
 
                     <div className="upcomingEventsList d-flex align-items-md-center justify-content-lg-center">
 
-
                     {
-                  limitEvents.map(event=>(
-
-                   <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.end.toLocaleString()} ></UpcomingEvents></a>
-
-                  ))
-
+                  Events.filter(event => event.start >= Date.now() ).slice(0,4).map(event =>
+                    
+                    <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.start.toLocaleString()} ></UpcomingEvents></a>
+                    )
                  }
+
 
                     </div>
                   </Col>
@@ -160,12 +142,10 @@ function Home() {
               <div className="pastEvents d-flex flex-column justify-content-center align-items-sm-center align-items-md-center align-items-lg-start align-items-xl-start">
 
                 {
-                  pastEvents.map(event=>(
-
-                   <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.end.toLocaleString()} ></UpcomingEvents></a>
-
-                  ))
-
+                  Events.filter(event => event.start < Date.now() ).slice(0,4).map(event =>
+                    
+                    <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.start.toLocaleString()} ></UpcomingEvents></a>
+                    )
                  }
 
               </div>

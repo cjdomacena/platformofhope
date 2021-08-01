@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import aboutImage from '../../images/about/about-home.png';
+import aboutProfile from '../../images/about/doris-profile.jpg';
 
 export const AboutImage = styled.div`
 
@@ -25,7 +26,7 @@ h1
 }
 p 
 {
-	width:60ch;
+	max-width:60ch;
 	line-height: 33px;
 	color: white;
 	font-size: 21px;
@@ -36,34 +37,62 @@ export const AboutStory = styled.div`
 
 height: auto;
 width: 100%;
+h2 
+{
+font-weight: 900;
+color:#009A7B;
+font-size: 4.5rem;
+}
+p {
+
+	color: #161616;
+	font-size: 1rem;
+}
 .row
 {
 	padding: 1rem;
 }
-.container
+.container 
 {
-	padding: 3rem;
-	height: auto;
-	margin: 2rem auto;
+
+
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
-.about-logo
+
+.about-image-container 
 {
-	width: 148px;
-	display:flex;
-	justify-content: flex-end;
-	height: auto;
+height: 250px;
+width: 250px;
+border-radius: 125px;
+background-image: url(${aboutProfile});
+background-size: cover;
+background-position: center;
+
 }
-.about-header h1
+.about-quote 
 {
-	font-size: 72px;
-	font-weight: 400;
-	width: 148px;
-	text-align: right;
-	line-height: 55px;
-	font-family: 'Scheherazade', serif;
-	font-weight: 700;
-	color:#009A7B;
-	padding-top: 1rem;
+
+p 
+{
+	font-size: 1rem;
+	color:#009A7B ;
+}
+span 
+{
+	color:#009A7B ;
+}
+
+
+
+
+}
+.vertical-line
+{
+height: auto;
+color: red;
+margin-right: .5rem;
+margin-top: .1rem;
 }
 
 .about-right
@@ -122,22 +151,15 @@ place-items:center;
 
 
 export const AboutPhases = styled.div`
-padding: 1rem;
-margin:1rem;
-.about-phases
-{
-	img 
-	{
-		width:100%;
-	}
-}
+
+padding-bottom: 3rem;
 
 .phases-container 
 {
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-left: 3rem;
+
 
 	h3 
 	{
@@ -161,15 +183,33 @@ margin:1rem;
 		}
 		
 	}
+
+	@media screen and (max-width: 1200px)
+	{
+
+		margin: 2rem 0;
+	}
 }
 .about-phases img 
 {
 	width: 100%;
 	height: 322px;
+	@media screen and (max-width: 900px)
+	{
+
+		height: auto;
+	}
 }
 .about-phases .final-phase img
 {
+	width: 100%;
+	height: 500px;
+	@media screen and (max-width: 900px)
+	{
 
-	height: 470px;
+		height: auto;
+	}
 }
+
+
 `

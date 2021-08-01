@@ -5,7 +5,7 @@ import paypal from './../images/paypal.png';
 import givelify from './../images/givelify.png';
 import venmo from './../images/venmo.png';
 import gofundme from './../images/gofundme.png';
-// import makeChange from './../images/makechange.jpg';
+import zelle from './../images/zelle.png';
 import { Row, Col, ListGroup } from 'react-bootstrap';
 import {Helmet} from 'react-helmet'
 
@@ -55,6 +55,10 @@ function Donate() {
                 <img src={gofundme} alt=""/>
                 <p className="ml-1">GoFundMe</p>
               </a>
+              <span className="my-2">
+                <img src={zelle} alt=""/>
+                <p className="ml-1">doris@platformofhope.org</p>
+              </span>
             </div>
           </div>
         </Col>
@@ -69,7 +73,7 @@ function Donate() {
         </Col>
       </Row>
       <Row className="donate-row mt-5">
-        <Col md>
+        <Col md className="donate-affiliate">
           <h3>Be An Affiliate</h3>
           <hr/>
           <div className="btm-pd">
@@ -91,7 +95,7 @@ function Donate() {
         <h3>In-Kind Donations</h3>
             <p>Platform of Hope greatly appreciates easy-open non-perishables,
               coats, blankets, toiletries, backpacks, and any other item easy for
-              homeless families to transport. We accept: 
+              homeless families to transport. We accept:
               </p>
             <ListGroup className="mt-3">
             <ListGroup.Item>Feminine hygiene products</ListGroup.Item>

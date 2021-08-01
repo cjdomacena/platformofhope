@@ -16,8 +16,8 @@ import instagram from './../../images/instagram.svg'
 import youtube from './../../images/youtube.svg'
 import { Link } from 'react-router-dom';
 import guideStar from './../../images/guidestar-silver.png';
-
 const Footer = () => {
+	
 	return (
 		<Container>
 			<FooterContainer>
@@ -74,8 +74,8 @@ const Footer = () => {
 									<Link to="/about"><li className="footer-link">About Us</li></Link>
 									<Link to="/services"><li className="footer-link">Services</li></Link>
 									<Link to="/contact"><li className="footer-link">Contact</li></Link>
-									<Link><li className="footer-link">Get Involved</li></Link>
-									<Link><li className="footer-link">Get Help</li></Link>
+									<Link to="/newsandevents"><li className="footer-link">News and Events</li></Link>
+									<Link to="/gethelp"><li className="footer-link">Get Help</li></Link>
 									<Link to="/donate"><li className="footer-link">Donate</li></Link>
 								</ul>
 							</div>

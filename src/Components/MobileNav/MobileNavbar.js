@@ -9,6 +9,8 @@ import {
 	NavBtnWrapper,
 	ButtonLink
 } from './MobileNavbarStyle';
+
+import { Link } from 'react-router-dom';
 const MobileNavbar = ({isOpen, handleClick}) => {
 	return (
 		<MobileNavbarContainer isOpen = {isOpen} handleClick={handleClick} onClick={handleClick}>
@@ -25,8 +27,8 @@ const MobileNavbar = ({isOpen, handleClick}) => {
 				</NavLinks>
 
 				<NavBtnWrapper>
-					<ButtonLink to="/gethelp">GET HELP</ButtonLink>
-					<ButtonLink to="/donate">DONATE</ButtonLink>
+				<Link to="/gethelp">	<ButtonLink>GET HELP</ButtonLink></Link>
+				<Link to="/donate">	<ButtonLink>DONATE</ButtonLink></Link>
 				</NavBtnWrapper>
 			</NavWrapper>
 

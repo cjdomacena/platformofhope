@@ -42,7 +42,6 @@ export const Events =
 		title: 'Food Distribution Ray of Hope Christian Church',
 		location: '',
 	},
-	// Past Events
 	{
 		allDay: true,
 		end: new Date('January 8, 2021'),

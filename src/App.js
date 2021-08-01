@@ -13,10 +13,7 @@ import Contact from './Pages/Contact';
 
 import MobileNavbar from './Components/MobileNav/MobileNavbar'
 import GetHelp from './Pages/GetHelp';
-/**
- * This is the top level App component that defines which paths will direct the user to which pages.
- * These paths are mainly used in Nav, so navigation links go to the right pages.
- */
+import ScrollToTop  from './Components/ScrollToTop';
 
 
 
@@ -28,13 +25,13 @@ function App() {
     console.log("Hello")
     setIsOpen(!isOpen);
   }
-
   return (
 
     <div className="App">
       <Router>
         <Nav handleClick={handleClick} />
         <MobileNavbar isOpen={isOpen} handleClick={handleClick} />
+        <ScrollToTop/>
         <Switch>
           <Route exact path="/platformofhope">
               <Redirect to="/" />

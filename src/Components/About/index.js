@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col} from 'react-bootstrap'
 import {AboutImage, AboutHero, AboutStory, AboutHeader, AboutPhases} from './AboutStyle';
 import aboutLogo from './../../images/about/about-logo.png';
-// import aboutImage from '../../images/about/about-hero.png';
+
 import about1 from './../../images/phases/about-1.png';
 import about2 from './../../images/phases/about-2.png';
 import about3 from './../../images/phases/about-3.png';
@@ -20,25 +20,25 @@ const AboutPage = () => {
 			</AboutImage>
 			<AboutStory>
 				<div className="container">
-					<div className="row">
-						<div className="col-3 about-left">
-							<div className="about-logo">
-									<img src={aboutLogo} alt="Platform of hope logo"/>
-							</div>
-							<div className="about-header">
-									<h1>Our Story</h1>
-							</div>
-							</div>
-						<div className="col-9 about-right">
-							<div className="about-text">
-								<p>Platform of Hope was started in 2016 by a single mother passionate about enhancing the lives of others. The platform is driven by a desire to impact and fulfill a mission that omits greed and focuses on the needs of the homeless population in Atlanta. After a combined 20 years of working for corporate America, nonprofits, and GA Dept. of Family & Children Services, Doris defied odds, used her personal savings then started Platform of Hope in a two-room storefront in Decatur, Georgia.</p>
-								<div className="about-smallText">
-							<span> Driven by a desire to impact lives and fulfill a mission that omits greed and focuses on the needs of homeless famalies</span>
-							</div>
-							</div>
+						<div className="container">
+						<div className="row">
+								<div className="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+									<div className="about-image-container">
+										{/* Image styling on aboutstyle */}
+									</div>
+
+								</div>
+								<div className="col-lg-8 mt-md-3 mt-lg-3 mt-sm-5 mt-5 justify-content-sm-center d-flex flex-column align-items-sm-center justify-content-lg-start justify-content-xl-start align-content-start  ">
+									<h2 className="align-self-lg-start align-self-center">Our Story</h2>
+									<p>Platform of Hope was started in 2016 by a single mother who is passionate about enhancing the lives of others. The platform is driven by a desire to impact and fulfill a mission that omits greed and focuses on the needs of the homeless population in Atlanta. After a combined 20 years of working for corporate America, nonprofits, and GA Dept. of Family & Children Services, Doris defied odds, used her personal savings, and started Platform of Hope in a two-room storefront in Decatur, Georgia.</p>
+									<div className="about-quote d-flex mt-2">
+										<span className="vertical-line">|</span><p> Driven by a desire to impact and fulfill a mission that omits greed and focuses on the needs of the homeless</p>
+									</div>
+								</div>
 
 						</div>
-					</div>
+
+						</div>
 				</div>
 			</AboutStory>
 			<hr></hr>

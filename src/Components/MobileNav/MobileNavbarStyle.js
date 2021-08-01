@@ -66,7 +66,7 @@ margin: 0 auto;
 height: 80px;
 &:hover 
 {
-	color: red;
+	color: #F99F00;
 	transition: 0.2s ease-in-out;
 }
 `

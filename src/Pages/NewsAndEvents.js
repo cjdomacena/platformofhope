@@ -6,8 +6,20 @@ import moment from 'moment';
 import Popup from './../Components/Popup';
 import { Events } from './../Components/Events';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import img1 from './../images/image-1.jpg';
-import img2 from './../images/image-2.jpg';
+import img1 from './../images/gallery/image-1.jpg';
+import img2 from './../images/gallery/image-2.jpg';
+import img3 from './../images/gallery/poh-image3.jpg';
+import img4 from './../images/gallery/poh-image4.jpg';
+import img5 from './../images/gallery/poh-image5.jpg';
+import img6 from './../images/gallery/poh-image6.jpg';
+import img7 from './../images/gallery/poh-image7.jpg';
+import img8 from './../images/gallery/poh-image8.jpg';
+import img9 from './../images/gallery/poh-image9.jpg';
+import img10 from './../images/gallery/poh-image10.jpg';
+import img11 from './../images/gallery/poh-image11.jpg';
+import img12 from './../images/gallery/poh-image12.jpg';
+import img13 from './../images/gallery/poh-image13.jpg';
+import img14 from './../images/gallery/poh-image14.jpg';
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import testVideo from './../images/test.mp4';
@@ -40,7 +52,7 @@ function NewsAndEvents() {
   // Swiper thumbsinstance
   const [thumbsSwiper, updateThumbsSwiper] = useState(null);
 
-  const imageSrcs = [img1, img2, img1, img2]
+  const imageSrcs = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14]
   const slides = [];
   const thumbs = [];
   for (let i = 0; i < imageSrcs.length; i++) {
