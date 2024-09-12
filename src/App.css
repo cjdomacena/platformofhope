@@ -146,6 +146,7 @@ ul {
   margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
+  padding-bottom: 2%;
 }
 
 .home-top > div {
@@ -163,10 +164,26 @@ ul {
 }
 
 .home-container {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./images/home-main.JPG");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./images/newpohextended.jpg");
   background-size: cover;
   min-height: 700px;
-  background-position: center 34px;
+  background-position: center 42px;
+}
+
+@media screen and (max-width: 600px) {
+  .home-svg {
+    transform: translate(0px, -1px);
+  }
+  .home-container {
+    background-position: center -10px;
+    min-height: 550px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-container {
+    background-position: center 20px;
+  }
 }
 
 /* .home-container .shadow-test
@@ -418,7 +435,7 @@ ul {
 
 .small-videos {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -427,6 +444,20 @@ ul {
   height: 300px;
   margin-top: 3%;
   margin-bottom: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.fb-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fb-video iframe {
+  border:none;
+  overflow:hidden;
 }
 
 @media screen and (max-width: 400px) {
@@ -476,9 +507,14 @@ ul {
 }
 
 .donate-row, .donate-header, .appr-of-funding > *,
-.services-main, .column-container {
+.services-main {
   margin-left: 10% !important;
   margin-right: 10% !important;
+}
+
+.column-container {
+  margin-left: 8% !important;
+  margin-right: 8% !important;
 }
 
 .donate-header > h2 {
@@ -554,8 +590,15 @@ hr {
 .funding-container, .column-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-bottom: 1%;
+}
+
+.funding-container {
+  justify-content: space-between;
+}
+
+.column-container {
+  justify-content: space-around;
 }
 
 .funding-container h4 {
@@ -733,14 +776,22 @@ hr {
     margin-bottom: 1rem;
   }
 
+  .upcomingEventsImage {
+    margin-bottom: 5rem !important;
+  }
+
 }
 
 .upcomingEvents img
 {
-  height: 318px;
+  height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.upcomingEventsImage {
+  margin-bottom: auto;
 }
 
 /* @media screen and (max-width: 800px)
@@ -1221,4 +1272,16 @@ div.rbc-row.rbc-month-header {
   {
     line-height: 1rem !important;
   }
+}
+
+.partners-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6% 20% 6% 20%;
+}
+
+.partners-container img {
+  min-height: 100px;
+  height: 200px;
 }

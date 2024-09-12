@@ -52,6 +52,9 @@ const NavBar = ({handleClick}) => {
                         <NavLink>
                             <Link to="/contact">Contact</Link>
                         </NavLink>
+                        <NavLink>
+                            <Link to="/partners">Partners</Link>
+                        </NavLink>
                         <Link to="/gethelp" ><NavButton className="secondary">GET HELP</NavButton></Link>
                         <Link to="/donate" ><NavButton className="primary">DONATE</NavButton></Link>
                     </NavLinks>

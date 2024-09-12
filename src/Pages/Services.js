@@ -8,6 +8,8 @@ import hotelroom from './../images/hotelroom.jpg';
 import mainImage from './../images/services-main.png';
 import jobWorkshops from './../images/job-workshops.png';
 import missionWork from './../images/mission-work.png';
+import sudsofhope from './../images/sudsofhope.jpg';
+import resourceguide from './../images/resourceguide2023.png';
 import { Helmet } from 'react-helmet';
 
 /**
@@ -41,26 +43,35 @@ function Services() {
         <Column
         src={rentassistance}
         title= "Rent/Utility Assistance"
-        p="We provide financial assistance for needy and low-income families facing eviction."
+        p="We provide financial assistance to families facing eviction."
         imgclass="services-img" />
         <Column src={hotelroom}
         title= "Hotel Voucher/Shelter Referral"
-        p="We offer hotel assistance for homeless families in addition to shelter referrals."
+        p="We offer hotel assistance and shelter referrals upon available funding."
         imgclass="services-img" />
         <Column
         src={computerlab}
-        title= "Re-Entry Services"
-        p="We facilitate basic computer applications and job readiness in area jails then connect released offenders with community partners for re-employment/second-chance."
+        title= "Reentry Services"
+        p="We facilitate basic computer applications and job readiness in area jails then connect individuals with community partners for re-employment/second-chance employment."
         imgclass="services-img" />
         <Column
         src={jobWorkshops}
         title= "Job Workshops"
-        p="We provide resume prep, application submission, job portal registration and free notary services to homeless clients."
+        p="We provide resume prep, application submission, job portal registration, free notary services to homeless clients, and free access to laptops."
         imgclass="services-img" />
         <Column src={missionWork}
         title= "Mission Work"
         p="Platform of Hope serves and volunteers throughout the world to transform lives of families."
         imgclass="services-img" />
+        <Column src={sudsofhope}
+        title= "Suds of Hope"
+        p="Platform of Hope-Suds of Hope offers safe, accessible showers at no cost to individuals experiencing homelessness."
+        imgclass="services-img" />
+        <Column src={resourceguide}
+        title= "Resource Guide"
+        p="Greater Atlanta's Critical Needs Guide. "
+        imgclass="services-img" 
+        hasLink={true} />
       </div>
 
     </div>

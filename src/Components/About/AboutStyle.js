@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import aboutImage from '../../images/about/about-home.png';
-import aboutProfile from '../../images/about/doris-profile.jpg';
+import aboutProfile from '../../images/about/doris-photo2.jpg';
 
 export const AboutImage = styled.div`
 
@@ -67,7 +67,6 @@ width: 250px;
 border-radius: 125px;
 background-image: url(${aboutProfile});
 background-size: cover;
-background-position: center;
 
 }
 .about-quote 
