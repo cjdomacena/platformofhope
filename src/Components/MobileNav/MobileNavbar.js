@@ -24,6 +24,7 @@ const MobileNavbar = ({isOpen, handleClick}) => {
 					<NavLink to="/about">About</NavLink>
 					<NavLink to="/newsandevents">News & Events</NavLink>
 					<NavLink to="/contact">Contact</NavLink>
+					<NavLink to="/partners">Partners</NavLink>
 				</NavLinks>
 
 				<NavBtnWrapper>

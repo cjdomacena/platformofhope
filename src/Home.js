@@ -4,6 +4,7 @@ import HomeColumn from './Components/HomeColumn/HomeColumn';
 import handsheart from './images/home-icons/handsheart.png'
 import holdhands from './images/home-icons/holdhands.png';
 import prayinghands from './images/home-icons/prayingicon.png';
+import flyer from './images/world_homeless_day.png';
 import { Row, Col } from 'react-bootstrap'
 import logo from './images/pohlogo.png';
 import { Events } from './Components/Events'
@@ -64,19 +65,9 @@ function Home() {
       </div>
 
       <div className="home-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-          <path fill="#ffffff" fill-opacity="1" d="M0,288L21.8,256C43.6,224,87,160,131,117.3C174.5,75,
-                                                218,53,262,90.7C305.5,128,349,224,393,240C436.4,256,
-                                                480,192,524,160C567.3,128,611,128,655,149.3C698.2,171,
-                                                742,213,785,208C829.1,203,873,149,916,117.3C960,85,1004,
-                                                75,1047,69.3C1090.9,64,1135,64,1178,74.7C1221.8,85,1265,
-                                                107,1309,101.3C1352.7,96,1396,64,1418,48L1440,32L1440,
-                                                0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,
-                                                0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,
-                                                0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,
-                                                0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,
-                                                0,22,0L0,0Z"></path>
-        </svg>
+      <svg className="home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#ffffff" fill-opacity="1" d="M0,160L26.7,144C53.3,128,107,96,160,112C213.3,128,267,192,320,197.3C373.3,203,427,149,480,149.3C533.3,149,587,203,640,192C693.3,181,747,107,800,85.3C853.3,64,907,96,960,144C1013.3,192,1067,256,1120,266.7C1173.3,277,1227,235,1280,224C1333.3,213,1387,235,1413,245.3L1440,256L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
+</svg>
       </div>
       <div className="home-section">
         <div className="home-col-title">
@@ -113,8 +104,8 @@ function Home() {
                   <Col md={12} lg={6} sm={12} offset={3} className="d-flex align-items-center justify-content-center pb-md-4 flex-column">
 
                     <div className="upcomingEventsImage">
-                    <h3 className="align-self-lg-start pb-lg-2 pl-0">Upcoming Events</h3>
-                      <img src='https://images.pexels.com/photos/6646923/pexels-photo-6646923.jpeg?cs=srgb&dl=pexels-rodnae-productions-6646923.jpg&fm=jpg' alt="" />
+                      <h3 className="align-self-lg-start pb-lg-2 pl-0">Upcoming Events</h3>
+                      <img src={flyer} alt="World Homeless Day" />
                     </div>
                   </Col>
                   <Col className="d-flex align-items-center justify-content-center flex-column" md={12} lg={6} sm={12}>
@@ -122,9 +113,11 @@ function Home() {
                     <div className="upcomingEventsList d-flex align-items-md-center justify-content-lg-center">
 
                     {
-                  Events.filter(event => event.start >= Date.now() ).slice(0,4).map(event =>
+                  Events.filter(event => event.start >= Date.now() ).sort((a, b) => {
+                    return a.start - b.start;
+                  }).slice(0,4).map(event =>
                     
-                    <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.start.toLocaleString()} ></UpcomingEvents></a>
+                    <Link to="/newsandevents"> <UpcomingEvents title={event.title} date={event.start.toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'})} ></UpcomingEvents></Link>
                     )
                  }
 
@@ -142,9 +135,11 @@ function Home() {
               <div className="pastEvents d-flex flex-column justify-content-center align-items-sm-center align-items-md-center align-items-lg-start align-items-xl-start">
 
                 {
-                  Events.filter(event => event.start < Date.now() ).slice(0,4).map(event =>
+                  Events.filter(event => event.start < Date.now() ).sort((a, b) => {
+                    return b.start - a.start;
+                  }).slice(0,4).map(event =>
                     
-                    <a href="/newsandevents"> <UpcomingEvents title={event.title} date={event.start.toLocaleString()} ></UpcomingEvents></a>
+                    <Link to="/newsandevents"> <UpcomingEvents title={event.title} date={event.start.toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'})} ></UpcomingEvents></Link>
                     )
                  }
 
@@ -179,7 +174,7 @@ function Home() {
                    <h1>Learn more about us</h1>
                    <p>Check out our full image and video gallery
 
-                   <a href="/newsandevents"><span className="pl-1"><FaArrowRight></FaArrowRight></span></a>
+                   <Link to="/newsandevents"><span className="pl-1"><FaArrowRight></FaArrowRight></span></Link>
                    </p>
 
 

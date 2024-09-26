@@ -6,8 +6,10 @@ import givelify from './../images/givelify.png';
 import venmo from './../images/venmo.png';
 import gofundme from './../images/gofundme.png';
 import zelle from './../images/zelle.png';
+import linktree from './../images/linktree.jpeg';
 import { Row, Col, ListGroup } from 'react-bootstrap';
-import {Helmet} from 'react-helmet'
+import {Helmet} from 'react-helmet';
+import {Link} from "react-router-dom";
 
 /**
  * This is the Donate component that holds all information for the Donate page.
@@ -59,6 +61,10 @@ function Donate() {
                 <img src={zelle} alt=""/>
                 <p className="ml-1">doris@platformofhope.org</p>
               </span>
+              <a href="https://linktr.ee/platformofhopeinc" target="_blank" rel="noopener noreferrer" className="my-2">
+                <img src={linktree} alt=""/>
+                <p className="ml-1">Linktree</p>
+              </a>
             </div>
           </div>
         </Col>
@@ -79,16 +85,16 @@ function Donate() {
           <div className="btm-pd">
             <h3>Business Partnerships</h3>
             <p>Platform of Hope offers flexible opportunities for businesses to benefit throughout giving.</p>
-            <a href="/contact" rel="noopener noreferrer">
+            <Link to="/contact" rel="noopener noreferrer">
               <button className="donate-btn">Contact Us</button>
-            </a>
+            </Link>
           </div>
           <div>
             <h3>Civic/Group Partnerships</h3>
             <p>Platform of Hope offers community awareness and strong networking.</p>
-            <a href="/contact" rel="noopener noreferrer">
+            <Link to="/contact" rel="noopener noreferrer">
               <button className="donate-btn">Contact Us</button>
-            </a>
+            </Link>
           </div>
         </Col>
         <Col md={{ offset: 1 }}>
@@ -135,10 +141,11 @@ function Donate() {
           </div>
           <div>
             <h3>25%</h3>
-            <h4>COVID-19 Response Unit</h4>
-            <p>This fund supports weekly distribution and DELIVERY of food, medicine and
-            supplies/necessities to immobilized senior citizens within four low-income apartment
-            housing communities.</p>
+            <h4>Suds of Hope</h4>
+            <p>Platform of Hope-Suds of Hope offers safe, accessible showers at no cost to individuals experiencing homelessness.
+
+Mobile units are staffed with volunteers. Each visitor is allowed up to 5 minutes for a continuous hot watered shower, new bath and face towel plus individual liquid soap and shampoo.
+Upon departure, individuals are given a POH Snack and Essentials Pack with hygiene products, water and non-perishables.</p>
           </div>
           <div>
             <h3>10%</h3>

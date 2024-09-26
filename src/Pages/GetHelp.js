@@ -3,9 +3,12 @@ import './../App.css';
 import emailjs from 'emailjs-com';
 import Select from 'react-select';
 import servicesImg from './../images/get-help-services-edited.png';
+import guideImg from './../images/atlantasguide.png';
 import resourceGuideImg from './../images/resource-guide.png';
 import resourceGuidePdf from './../files/2018-grady-healthy-living-resource-guide.pdf';
+import guidePdf from './../files/Critical-Needs-Guide-2023.pdf';
 import { Helmet } from 'react-helmet';
+import {Link} from "react-router-dom";
 
 /**
  * This is the Get Help component that holds all information for the Get Help page.
@@ -69,19 +72,20 @@ function GetHelp() {
       </div>
       <div className="get-help-container">
         <div className="get-help-card">
-          <img src={servicesImg} alt="Services"/>
-          <h2>Services</h2>
-          <p>Check out more details on the services we offer</p>
-          <a href="/services" className="get-help-services-btn">
-            <button>TO SERVICES</button>
+          <img src={guideImg} alt="Resource Guide"/>
+          <h2>Critical Needs Guide</h2>
+          <p>Greater Atlanta's Critical Needs Guide</p>
+          <a href={guidePdf} target="_blank" rel="noopener noreferrer" download className="get-help-services-btn">
+            <button>DOWNLOAD</button>
           </a>
         </div>
         <div className="get-help-card">
-          <img src={resourceGuideImg} alt="Services"/>
+          <img src={resourceGuideImg} alt="Resource Guide"/>
           <h2>Resource Guide</h2>
-          <p>Find other resouces in the Atlanta Area</p>
-          <a href={resourceGuidePdf} target="_blank" rel="noopener noreferrer" download className="get-help-services-btn">
-            <button>DOWNLOAD</button>
+          <p>Access the United Way 211 searchable database</p>
+          <p>of services in Atlanta, Georgia here</p>
+          <a href={"http://211online.unitedwayatlanta.org/"} target="_blank" rel="noopener noreferrer" className="get-help-services-btn">
+            <button>TO DATABASE</button>
           </a>
         </div>
       </div>

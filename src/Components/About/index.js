@@ -83,7 +83,7 @@ const AboutPage = () => {
 							<img src={about3} alt="housing for final phase"></img>
 							<div className="mt-3">
 								<h3>Final Phase</h3>
-							   <p>The final phase of Platform of Hope will introduce numerous services surrounding the shelter such as supportive employment, transportation services, educational assistance, GED/typing classes, Federal/State benefits application assistance, daycare resources, HIV testing, address and mail service, and much more.</p>
+							   <p>The final phase of Platform of Hope will introduce an array of services such as supportive employment, transportation services, educational assistance, GED/typing classes, Federal/State benefits application assistance, daycare resources, HIV testing, address and mail service, and much more.</p>
 							   </div>
 							</div>
 
